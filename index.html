@@ -1,5 +1,35 @@
-<html>
-	<body>
-		Hello World
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+
+    <!-- Language alternates -->
+    <link rel="alternate" hreflang="en" href="https://jeremyklix.ca" />
+    <link rel="alternate" hreflang="x-default" href="http://jeremyklix.ca" />
+
+    <script>
+        // 1. Get the primary language browser setting (e.g., "en-US" becomes "en")
+        const userLang = navigator.language || navigator.userLanguage;
+        const shortLang = userLang.toLowerCase().split('-')[0];
+
+        // 2. Define your supported languages and their target folders
+        const supportedLanguages = {
+            'en': '/en/'
+        };
+
+        // 3. Redirect to the matching language, or default to English
+        const targetDestination = supportedLanguages[shortLang] || supportedLanguages['en'];
+        window.location.replace(targetDestination);
+    </script>
+</head>
+<body>
+    <!-- Fallback content if JavaScript is disabled or slow -->
+    <noscript>
+        <ul>
+            <li><a href="/en/">English</a></li>
+        </ul>
+    </noscript>
+</body>
 </html>
