@@ -11,6 +11,8 @@
     <link rel="canonical" href="https://jeremyklix.ca" />
 
     <link rel="stylesheet" href="../css/main.css">
+
+    <script src="../scripts/contact_form.js" defer></script>
 </head>
 
 <body>
@@ -22,6 +24,7 @@
                     <li><a href="#mission">Mission</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#priorities">Priorities</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
                     <li><a href="#information">Information</a></li>
                 </ul>
             </nav>
@@ -34,12 +37,12 @@
     </div>
 
     <section id="mission">
-        <h2 style="--accent: var(--accent-gold);">The Mission</h2>
+        <h2 style="--accent: var(--accent-green);">The Mission</h2>
         <p>To bring proactive, forward-thinking solutions to Abbotsford that address long-term infrastructure needs and build a resilient, inclusive city where everyone can live work and play.</p>
     </section>
 
     <section id="about">
-        <h2 style="--accent: var(--accent-green);">About Me</h2>
+        <h2 style="--accent: var(--accent-gold);">About Me</h2>
         <div style="display: flex; gap: 3rem; align-items: flex-start;">
             <div style="flex: 2;">
                 <p>I have called Abbotsford my home for over 15 years. I was drawn to the community through my time spent working and pursuing education here. I attended the University of the Fraser Valley where I earned a Bachelor’s degree in Computer Information Systems and a Diploma in Architectural Drafting. Following university, I have worked in Abbotsford as a software developer helping businesses use technology to identify amd solve their problems.
@@ -54,7 +57,7 @@
     </section>
 
     <section id="priorities">
-        <h2 style="--accent: var(--accent-gold);">Campaign Priorities</h2>
+        <h2 style="--accent: var(--accent-green);">Campaign Priorities</h2>
         <div class="priority-grid">
             <div class="card">
                 <h3>Modern Transport</h3>
@@ -73,6 +76,27 @@
                 <p>Provide residents with places to create, gather, play and socialize. Upgrade our sports fields, and recreation and community centres.</p>
             </div>
         </div>
+    </section>
+
+    <section id="contact_me">
+        <h2 style="--accent: var(--accent-gold);">Contact me</h2>
+        <form action="https://formsubmit.co/ajax/a3d3dc4f66d6d4bf3a6d3abb470a56e8" method="POST">
+            <input type="text" name="_honey" style="display:none">
+
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" required>
+
+            <label for="email">Your Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+            <button type="submit" disabled="true">Send Message</button>
+
+            <div class="form-status"></div>
+        </form>
     </section>
 
     <section id="information">
