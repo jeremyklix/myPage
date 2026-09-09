@@ -9,6 +9,12 @@
        --accent-green: #15803d;
        --accent-gold: #eab308;
        --hover-blue: #1e293b;
+
+       --body-link-unvisited: #0000ee;
+       --body-link-visited: #551a8b;
+       --body-link-hover: #1d4ed8;
+       --body-link-focus: #0f172a;
+       --body-link-active: #ff0000;
    }
 
    @media (prefers-color-scheme: dark) {
@@ -20,6 +26,12 @@
 
            --primary-blue: #1e293b;
            --hover-blue: #334155;
+
+           --body-link-unvisited: #38bdf8;
+           --body-link-visited: #a78bfa;
+           --body-link-hover: #7dd3fc;
+           --body-link-focus: #eab308;
+           --body-link-active: #fca5a5;
        }
    }
 
@@ -319,4 +331,24 @@
            margin: 0 auto;
        }
    }
+
+    a:not(nav a):link {
+        color: var(--body-link-unvisited) !important;
+        text-decoration: underline;
+    }
+    a:not(nav a):visited {
+        color: var(--body-link-visited) !important;
+    }
+    a:not(nav a):hover {
+        color: var(--body-link-hover) !important;
+        text-decoration: underline;
+    }
+    a:not(nav a):focus-visible {
+        color: var(--body-link-focus) !important;
+        outline: 2px dashed var(--link-focus);
+        outline-offset: 4px;
+    }
+    a:not(nav a):active {
+        color: var(--body-link-active) !important;
+    }
 
